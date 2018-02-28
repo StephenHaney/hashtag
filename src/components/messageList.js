@@ -23,7 +23,7 @@ class MessageList extends Component {
 
   render() {
     return (
-      <ul>
+      <ul className="messageList">
         {
           this.state.messages.map(message => 
             <Message key={message.id} message={message} />
@@ -47,7 +47,7 @@ class MessageList extends Component {
     });
     // Add the new messages array to the existing messages state:
     this.setState(prevState => ({
-      messages: [...prevState.messages, ...newMessages]
+      messages: [ ...newMessages, ...prevState.messages]
     }));
   }
 }

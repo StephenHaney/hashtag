@@ -17,10 +17,12 @@ class Input extends Component {
 
   render() {
     return(
-      <form onSubmit={this.handleSubmit}>
-        <input type="text" value={this.props.value} onChange={this.handleChange} />
-        <input type="submit" />
-      </form>
+      <div className="input-wrapper">
+        <form onSubmit={this.handleSubmit}>
+          <input autoFocus className="input-input" type="text" value={this.state.value} onChange={this.handleChange} />
+          <input className="input-submit btn" type="submit" />
+        </form>
+      </div>
     )
   }
 
@@ -43,6 +45,11 @@ class Input extends Component {
           console.error("Error adding message: ", error);
       });
     }
+
+    // clear out the text input
+    this.setState({
+      value: '',
+    });
   }
 }
 
