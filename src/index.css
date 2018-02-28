@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* app level */
+#hashtag {
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+/* messageList */
+
+
+/* messages */
+li {
+  list-style-type: none;
+  line-height: 26px;
+}
