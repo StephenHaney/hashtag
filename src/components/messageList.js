@@ -14,13 +14,6 @@ class MessageList extends Component {
     }
   }
 
-  componentWillMount() {
-    // Set up the listener for DB changes:
-    db.collection('messages')
-      .orderBy('dateCreated', 'desc')
-      .onSnapshot(this.onDbChange.bind(this));
-  }
-
   render() {
     return (
       <ul className="messageList">
@@ -31,6 +24,13 @@ class MessageList extends Component {
         }
       </ul>
     )
+  }
+
+  componentWillMount() {
+    // Set up the listener for DB changes:
+    db.collection('messages')
+      .orderBy('dateCreated', 'desc')
+      .onSnapshot(this.onDbChange.bind(this));
   }
 
   onDbChange(snapshot) {

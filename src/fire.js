@@ -2,7 +2,7 @@ import firebase from 'firebase';
 import '@firebase/firestore';
 
 
-const config = { /* COPY THE ACTUAL CONFIG FROM FIREBASE CONSOLE */
+const config = {
   apiKey: "AIzaSyDY4jT5AZUhe9EOMF2GnNA2it20Y4U2jJ8",
   authDomain: "hashtag-2e980.firebaseapp.com",
   databaseURL: "https://hashtag-2e980.firebaseio.com",
